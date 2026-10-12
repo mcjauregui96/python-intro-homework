@@ -1,5 +1,5 @@
 # git log --oneline output:
-# a51549f (HEAD -> assignment-2) made three wamupfiles
+# a51549f (HEAD -> assignment-2) made three warmupfiles
 
-age_calc= 2026 - int(input("When is your birthyear? "))
-print(f'You are {age_calc} years old')
+message = "I have learned how to debug faulty scripts and how to fix them too."
+print(message)
