@@ -1,6 +1,7 @@
 # Ask the user for a day of the week and a time of day
 day_of_week = input("Please enter a day of the week: ").strip().lower()
 time_of_day = input("Please enter a time of day: ").strip().lower()
+# validate the day of the week and time of day inputs
 if day_of_week not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
     print("Invalid day of the week entered. Please enter a valid day (Monday, Tuesday, etc.).")
 elif time_of_day not in ["morning", "afternoon", "evening"]:
