@@ -1,7 +1,11 @@
 # Ask the user for a day of the week and a time of day
 day_of_week = input("Please enter a day of the week: ").strip().lower()
 time_of_day = input("Please enter a time of day: ").strip().lower()
-if day_of_week != "monday" and day_of_week != "friday" and day_of_week != "sunday":
+if day_of_week not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
+    print("Invalid day of the week entered. Please enter a valid day (Monday, Tuesday, etc.).")
+elif time_of_day not in ["morning", "afternoon", "evening"]:
+    print("Invalid time of day entered. Please enter a valid time (morning, afternoon, or evening).")    
+elif day_of_week != "monday" and day_of_week != "friday" and day_of_week != "sunday":
     print(f"It's {day_of_week.capitalize()}! There's nothing planned for today.")
 elif day_of_week == "monday":
     if time_of_day == "morning":
