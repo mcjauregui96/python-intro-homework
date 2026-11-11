@@ -1,6 +1,16 @@
 #Build a menu-driven program using a while loop. Each time the menu displays, the user picks an option. 
 
 numbers = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40]
+def bubble_sort(numbers):
+            copy = numbers[:]
+            swapped = True
+            while swapped:
+                swapped = False
+                for i in range(len(copy) - 1):
+                    if copy[i] > copy[i + 1]:
+                        copy[i], copy[i + 1] = copy[i + 1], copy[i]
+                        swapped = True
+            return copy 
 
 while True:
     print("\n=== Number Cruncher ===")
@@ -34,17 +44,6 @@ while True:
         if not found:
             print(f"Number {target} not found in the list.")
     elif choice == '4':
-        def bubble_sort(numbers):
-            copy = numbers[:]
-            swapped = True
-            while swapped:
-                swapped = False
-                for i in range(len(copy) - 1):
-                    if copy[i] > copy[i + 1]:
-                        copy[i], copy[i + 1] = copy[i + 1], copy[i]
-                        swapped = True
-            return copy 
-    
         print("The list has been sorted.")
         print(f"Sorted list: {bubble_sort(numbers)}")
     elif choice == '5':
