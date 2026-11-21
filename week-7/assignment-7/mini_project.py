@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 def generate_report(category):
-    """Generate a report for the given category and write it to <category>_report.txt."""
+    #Generate a report for the given category and write it to <category>_report.txt.
 
     # 1. Verify the input file exists
     input_path = os.path.join("..", "data", "expenses.csv")
@@ -33,7 +33,7 @@ def generate_report(category):
     today = datetime.now().strftime("%B %d, %Y")
 
     with open(output_path, "w") as out:
-        out.write(f"{category} Expense Report — generated {today}\n")
+        out.write(f"{category} Expense Report generated {today}\n")
         for row in filtered:
             out.write(f"{row['date']}: ${row['amount']:.2f}\n")
         out.write(f"Total: ${total:.2f}\n")
