@@ -42,4 +42,4 @@ def generate_report(category):
 
 
 if __name__ == "__main__":
-    generate_report("Food")
+    generate_report("Food") 

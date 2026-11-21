@@ -12,4 +12,4 @@ else:
 
 # 3. Build the path with os.path.join() from its parts
 joined_path = os.path.join("..", "data", "expenses.csv")
-print("Joined path:", joined_path)
+print("Joined path:", joined_path) 
